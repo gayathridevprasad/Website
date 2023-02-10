@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feb_9</title>
+    <style>
+        body {
+            background-color: brown;
+        }
+
+        #f1 {
+            background-color: beige;
+        }
+
+        legend {
+            background-color: black;
+            color: white;
+            font-size: 25px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            background-color: azure;
+        }
+    </style>
+    <script>
+        function func() {
+            var check = "";
+            java = document.getElementById("Java");
+            python = document.getElementById("Python");
+            css = document.getElementById("CSS");
+            if (java.checked == true)
+                check += "Java ";
+            if (python.checked == true)
+                check += "Python ";
+            if (css.checked == true)
+                check += "CSS ";
+            var data = document.form.text.value.bold() + " is from " + document.form.radio.value.bold() + " and the subjects are " + check.bold();
+            document.getElementById('result').innerHTML = data;
+        }
+
+        function change() {
+            document.body.style.backgroundColor = document.form.color.value;
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset id="f1">
+        <legend>~ Enter the required data ~</legend>
+        <form name="form" function="post" action="https://www.google.com">
+            <label>What's your name?</label>
+            <br />
+            <input type="text" placeholder="Name please!" name="text">
+            <br /><br />
+
+            <label>Choose the batch</label>
+            <br />
+            <input type="radio" name="radio" value="Batch-1" checked> Batch 1
+            <input type="radio" name="radio" value="Batch-2"> Batch 2
+            <input type="radio" name="radio" value="Batch-3"> Batch 3
+            <br /><br />
+
+            <label>Choose your subjects</label>
+            <br />
+            <input type="checkbox" name="c1" id="Java">Java
+            <input type="checkbox" name="c2" id="Python">Python
+            <input type="checkbox" name="c3" id="CSS">CSS
+            <br /><br />
+
+            <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <br /><br />
+
+            <input type="file" name="file">
+            <br /><br />
+            <input type="color" name="color" value="#ff0000">
+            <br /><br />
+            <input type="button" value="Change Background" onclick="change()">
+            <br /><br /><br /><br />
+
+            <input type="button" name="submit" onclick="func()" value="Get Result!">
+            <p id="result"></p>
+            <br /><br /><br />
+
+            <a href="link1.html" target="_blank"><img src="image/portal.gif"></a>
+        </form>
+    </fieldset>
+</body>
+
+</html>

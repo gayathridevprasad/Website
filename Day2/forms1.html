@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fetch() {
+            var name = f1.name.value;
+            var password = f1.pass.value;
+            //document.write(name);
+            document.getElementById("p1").innerHTML = name;
+            document.getElementById("p2").innerHTML = password;
+
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="f1" method="get">
+
+        <label>Enter Your Name</label> : <input type="text" name="name" placeholder="Ex.Kayathri Devi"><br>
+        <br><label>Enter your Password</label> : <input type="password" name="pass"
+            placeholder="ssshhh...your secret "><br><br>
+        <input type="button" value="Click Me" onclick="fetch();">
+    </form>
+    <p>The Name is <span id="p1"></span></p>
+    <p id="p2"></p>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function fetch() {
+            localStorage.setItem("txtValue", JSON.stringify(f1.email.value));
+        }
+    </script>
+</head>
+
+<body>
+
+    <!--    <form>
+        <fieldset>
+            <legend>Admission Form</legend>
+            <table align="center">
+                <caption><mark>
+                        <div style="border:1px solid blue;">Personal Details</div>
+                    </mark></caption>
+                <tr>
+                    <td><label>Name of the Student</label></td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label>Age</label></td>
+                    <td><input type="number" name="age" required></td>
+                </tr>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label>Contact No</label></td>
+                    <td><input type="tel" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+-->
+
+    <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+        <form name="f1" action="action.html" method="get" autocomplete="off">
+            <legend>Sign Up Form</legend>
+            <label>Email:<br />
+                <input type="text" name="email" id="email" /></label><br />
+            <label>Password<br />
+                <input type="text" name="password" id="password" /></label><br>
+            <label>Mobile:<br />
+                <input type="text" name="mobile" id="mobile" /></label><br />
+            <label>Telephone:<br />
+                <input type="text" name="telephone" id="telephone" /></label><br>
+            <input type="submit" value="Submit" onclick="fetch()">
+        </form>
+</body>
+
+</html>
